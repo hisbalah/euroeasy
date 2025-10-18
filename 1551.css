@@ -1,0 +1,33 @@
+
+/* FORCE the new background under the Unslider and hide the old image source if it's an <img> */
+
+/* 1) If the old picture is an <img> inside the slide, hide it */
+#slider-3-1551 .oxygen-unslider-container li img {
+  display: none !important;
+}
+
+/* 2) Apply your new background broadly to the common containers */
+#section-2-1551,
+#section-2-1551 .ct-section-inner-wrap,
+#slider-3-1551,
+#slider-3-1551 .oxygen-unslider-container,
+#slide-4-1551,
+#section-2-1551 .ct-slide {
+  background-image: url("my.jpg") !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  min-height: 400px;
+}
+
+/* 3) If Oxygen/Theme adds overlays via ::before, neutralize them */
+#section-2-1551::before,
+#slider-3-1551::before,
+#slide-4-1551::before,
+#section-2-1551 .ct-slide::before {
+  content: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+}

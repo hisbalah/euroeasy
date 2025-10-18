@@ -1,0 +1,12 @@
+/* === Complianz cookie banner overrides === */
+.cmplz-cookiebanner, .cmplz-cookiebanner.cmplz-right, .cmplz-cookiebanner.cmplz-bottom, .cmplz-cookiebanner.cmplz-bottom-right {
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) !important;
+  margin: 0 auto !important;
+}
+.cmplz-cookiebanner { max-width: min(680px, 92vw) !important; width: auto !important; }
+.cmplz-logo, .cmplz-header .cmplz-logo, .cmplz-header img.cmplz-logo, .cmplz-header .cmplz-brand, .cmplz-modal .cmplz-logo { display: none !important; }
+.cmplz-header a img, .cmplz-header img { display: none !important; }
+.cmplz-modal, .cmplz-preferences { left: 50% !important; right: auto !important; transform: translateX(-50%) !important; }
+.cmplz-cookiebanner, .cmplz-modal { z-index: 99999 !important; }
