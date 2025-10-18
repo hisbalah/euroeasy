@@ -174,6 +174,131 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   border: none !important;
 }
 </style>
+
+<style id="base-dark-mode-fallback">
+body.dark-mode{
+  background-color:#121212;
+  color:#ffffff;
+}
+</style>
+
+
+
+
+
+
+<style id="liberation-precise-toggle">
+:root{
+  --toggle-w: 84px;
+  --toggle-h: 42px;
+  --pad: 4px;
+  --rail: #000000;            /* black rail */
+  --thumb-off: #FFD54A;       /* yellow thumb when OFF */
+  --thumb-on: #000000;        /* black thumb when ON */
+  --glow: rgba(255,213,74,.35);
+  --t: .55s;
+  --e: cubic-bezier(.22,.61,.36,1);
+}
+
+.theme-floating-switch{
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 99999;
+}
+
+.theme-switch{
+  position: relative;
+  width: var(--toggle-w);
+  height: var(--toggle-h);
+  display: inline-block;
+}
+
+.theme-switch input{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.theme-switch .track{
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--rail);
+  border: none; /* odstránime okraje = žiadna vertikálna čiara */
+  transition: background var(--t) var(--e), box-shadow var(--t) var(--e);
+  box-shadow: inset 0 0 10px rgba(0,0,0,.8);
+}
+
+/* THUMB */
+.theme-switch .thumb{
+  position: absolute;
+  top: var(--pad);
+  left: var(--pad);
+  width: calc(var(--toggle-h) - var(--pad)*2);
+  height: calc(var(--toggle-h) - var(--pad)*2);
+  border-radius: 50%;
+  background: var(--thumb-off);
+  box-shadow: 0 0 0 4px var(--glow), 0 3px 10px rgba(0,0,0,.5);
+  transition: left var(--t) var(--e),
+              background var(--t) var(--e),
+              box-shadow var(--t) var(--e),
+              transform var(--t) var(--e);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 0;
+}
+
+/* Crescent mask */
+.theme-switch .thumb::before,
+.theme-switch .thumb::after{
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 82%;
+  height: 82%;
+  transition: opacity var(--t) var(--e), transform var(--t) var(--e);
+}
+
+.theme-switch .thumb::before{
+  background: #ffffff;
+  opacity: 0;
+}
+
+.theme-switch .thumb::after{
+  background: var(--thumb-on);
+  opacity: 0;
+  transform: translateX(-10%);
+}
+
+/* ON state */
+.theme-switch input:checked + .track{
+  background: var(--rail); /* remains black */
+}
+.theme-switch input:checked + .track + .thumb{
+  left: calc(100% - var(--pad) - (var(--toggle-h) - var(--pad)*2));
+  background: var(--thumb-on);
+  box-shadow: 0 0 0 4px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.7);
+  transform: translateZ(0);
+}
+.theme-switch input:checked + .track + .thumb::before{
+  opacity: 1;
+}
+.theme-switch input:checked + .track + .thumb::after{
+  opacity: 1;
+  transform: translateX(35%);
+}
+
+.theme-switch:hover .thumb{ transform: translateY(-1px); }
+</style>
+
+
+
+
+
 </head>
 <body class="home page-template-default page page-id-1551 wp-custom-logo wp-embed-responsive oxygen-body" data-cmplz="0" data-rsssl="1">
 <!-- Google Tag Manager (noscript) -->
@@ -1081,6 +1206,39 @@ ready(() => {
     const v = JSON.parse(localStorage.getItem(KEY) || 'null');
     if(v){ hideAll(); }
   }catch(e){}
+})();
+</script>
+
+<div class="theme-floating-switch" aria-label="Theme toggle">
+  <label class="theme-switch">
+    <input type="checkbox" id="theme-theme-checkbox">
+    <span class="track"></span><span class="thumb"></span>
+  </label>
+</div>
+
+<script id="liberation-precise-toggle-js">
+(function(){
+  var cb = document.getElementById('theme-theme-checkbox');
+  if(!cb) return;
+
+  // INIT: saved pref > system pref
+  try{
+    var saved = localStorage.getItem('site_theme');
+    if(saved==='dark' || (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)){
+      document.body.classList.add('dark-mode');
+      cb.checked = true;
+    }
+  }catch(e){}
+
+  cb.addEventListener('change', function(){
+    if(cb.checked){
+      document.body.classList.add('dark-mode');
+      try{ localStorage.setItem('site_theme','dark'); }catch(e){}
+    }else{
+      document.body.classList.remove('dark-mode');
+      try{ localStorage.setItem('site_theme','light'); }catch(e){}
+    }
+  });
 })();
 </script>
 </body>
