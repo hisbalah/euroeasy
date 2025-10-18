@@ -44,7 +44,6 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <style id="wpgb-head-inline-css" type="text/css">
 .wp-grid-builder:not(.wpgb-template),.wpgb-facet{opacity:0.01}.wpgb-facet fieldset{margin:0;padding:0;border:none;outline:none;box-shadow:none}.wpgb-facet fieldset:last-child{margin-bottom:40px;}.wpgb-facet fieldset legend.wpgb-sr-only{height:1px;width:1px}
 </style>
-<link href="https://mamnarok.sk/wp-content/plugins/complianz-gdpr/assets/css/cookieblocker.min.css?ver=1732633642" id="cmplz-general-css" media="all" rel="stylesheet" type="text/css"/>
 <link href="https://mamnarok.sk/wp-content/plugins/chaty/css/chaty-front.min.css?ver=3.4.81711564100" id="chaty-front-css-css" media="all" rel="stylesheet" type="text/css"/>
 <script id="jquery-core-js" src="https://mamnarok.sk/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" type="text/javascript"></script>
 <!-- Google tag (gtag.js) snippet added by Site Kit -->
@@ -94,8 +93,99 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://mamnarok.sk/wp-content/uploads/oxygen/css/1551.css?cache=1737114304&amp;ver=6.5.7" id="oxygen-cache-1551-css" media="all" rel="stylesheet" type="text/css"/>
 <link href="https://mamnarok.sk/wp-content/uploads/oxygen/css/universal.css?cache=1737641010&amp;ver=6.5.7" id="oxygen-universal-styles-css" media="all" rel="stylesheet" type="text/css"/>
 <!-- END OF WP_HEAD() -->
-</link></link></meta></meta><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/><link href="contact-widget.css" rel="stylesheet"/><link href="cookie-overrides.css" rel="stylesheet"/><link href="1551.css" rel="stylesheet"/></head>
-<body class="home page-template-default page page-id-1551 wp-custom-logo wp-embed-responsive oxygen-body" data-cmplz="1" data-rsssl="1">
+</link></link></meta></meta><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/><link href="contact-widget.css" rel="stylesheet"/><link href="cookie-overrides.css" rel="stylesheet"/><link href="1551.css" rel="stylesheet"/>
+<style id="mn-cookie-settings-white-strongswitch">
+/* 1) White background ONLY for the settings modal shell, keep inner elements transparent */
+#mn-cookie-settings .mn-modal { 
+  background-color: #ffffff !important; 
+  color: #000000 !important; 
+}
+#mn-cookie-settings .mn-modal * { 
+  background-color: transparent !important; 
+  color: #000000 !important; 
+}
+
+/* 2) Make switches big and high-contrast so they can't "disappear" on white */
+#mn-cookie-settings .mn-switch {
+  position: relative !important;
+  display: inline-block !important;
+  width: 56px !important;
+  height: 30px !important;
+  vertical-align: middle !important;
+}
+#mn-cookie-settings .mn-switch input {
+  position: absolute !important;
+  inset: 0 !important;
+  opacity: 0 !important;
+  cursor: pointer !important;
+}
+#mn-cookie-settings .mn-switch .track {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 30px !important;
+  background-color: #e0e0e0 !important;
+  border: 2px solid #000000 !important;      /* thick black border for visibility */
+  box-shadow: none !important;
+  transition: background-color .2s ease, border-color .2s ease !important;
+}
+#mn-cookie-settings .mn-switch .thumb {
+  position: absolute !important;
+  top: 3px !important; 
+  left: 3px !important;
+  width: 24px !important; 
+  height: 24px !important;
+  border-radius: 50% !important;
+  background-color: #000000 !important;       /* black thumb */
+  border: 2px solid #ffffff !important;       /* white outline for contrast */
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15) !important;
+  transition: left .2s ease !important;
+}
+#mn-cookie-settings .mn-switch input:checked + .track {
+  background-color: #D4B483 !important;       /* beige when ON */
+  border-color: #000000 !important;
+}
+#mn-cookie-settings .mn-switch input:checked + .track + .thumb {
+  left: calc(100% - 27px) !important;         /* 56 - 24 - (2*?+gaps) */
+}
+
+/* 3) Optional: make the "Zapnuté" pill clearly readable on white */
+#mn-cookie-settings .mn-pill {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #000000 !important;
+}
+</style>
+
+<style id="mn-cookie-banner-bg-white-text-black">
+#mn-cookie-banner {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+#mn-cookie-banner * {
+  color: #000000 !important;
+}
+</style>
+
+<style id="mn-cookie-accept-buttons-beige">
+#mn-cookie-banner .mn-actions .mn-accept,
+#mn-cookie-settings .mn-footer .mn-save {
+  background-color: #D4B483 !important;
+  color: #000000 !important;
+  border: none !important;
+}
+</style>
+
+<style id="mn-cookie-banner-width-left">
+#mn-cookie-banner {
+  position: fixed !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 70% !important;
+  margin: 0 !important;
+}
+</style>
+</head>
+<body class="home page-template-default page page-id-1551 wp-custom-logo wp-embed-responsive oxygen-body" data-cmplz="0" data-rsssl="1">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-WPNJ3P2S" style="display:none;visibility:hidden" width="0"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
@@ -197,33 +287,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div id="cmplz-cookiebanner-container"><div aria-describedby="cmplz-message-1-optin" aria-labelledby="cmplz-header-1-optin" aria-live="polite" aria-modal="true" class="cmplz-cookiebanner cmplz-hidden banner-1 bottom-right-view-preferences optin cmplz-bottom-right cmplz-categories-type-view-preferences" data-nosnippet="true" role="dialog">
 <div class="cmplz-header">
 <div class="cmplz-logo"><a aria-current="page" class="custom-logo-link" href="index.html" rel="home"><img alt="MámNárok.SK" class="custom-logo" decoding="async" fetchpriority="high" height="181" sizes="(max-width: 1153px) 100vw, 1153px" src="https://mamnarok.sk/wp-content/uploads/2024/01/stvorec-napis-vedla-1.png" srcset="https://mamnarok.sk/wp-content/uploads/2024/01/stvorec-napis-vedla-1.png 1153w, https://mamnarok.sk/wp-content/uploads/2024/01/stvorec-napis-vedla-1-300x47.png 300w, https://mamnarok.sk/wp-content/uploads/2024/01/stvorec-napis-vedla-1-1024x161.png 1024w, https://mamnarok.sk/wp-content/uploads/2024/01/stvorec-napis-vedla-1-768x121.png 768w" width="1153"/></a></div>
-<div class="cmplz-title" id="cmplz-header-1-optin">Spravujte súhlas so súbormi cookie</div>
+<div class="cmplz-title" id="cmplz-header-1-optin">Prispôsobte si povolenia súborov cookies</div>
 <div aria-label="Zavrieť okno" class="cmplz-close" role="button" tabindex="0">
 <svg aria-hidden="true" class="svg-inline--fa fa-times fa-w-11" data-icon="times" data-prefix="fas" focusable="false" role="img" viewbox="0 0 352 512" xmlns="http://www.w3.org/2000/svg"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" fill="currentColor"></path></svg>
 </div>
 </div>
 <div class="cmplz-divider cmplz-divider-header"></div>
 <div class="cmplz-body">
-<div class="cmplz-message" id="cmplz-message-1-optin">Na poskytovanie tých najlepších skúseností používame technológie, ako sú súbory cookie na ukladanie a/alebo prístup k informáciám o zariadení. Súhlas s týmito technológiami nám umožní spracovávať údaje, ako je správanie pri prehliadaní alebo jedinečné ID na tejto stránke. Nesúhlas alebo odvolanie súhlasu môže nepriaznivo ovplyvniť určité vlastnosti a funkcie.</div>
+<div class="cmplz-message" id="cmplz-message-1-optin">Táto webová stránka používa súbory cookies na zlepšenie vášho zážitku pri prechádzaní webom. Z nich sa vo vašom prehliadači ukladajú súbory cookies, ktoré sú kategorizované podľa potreby, pretože sú nevyhnutné pre fungovanie základných funkcií webovej stránky. Používame aj cookies tretích strán, ktoré nám pomáhajú analyzovať a pochopiť, ako používate túto webovú stránku. Tieto cookies budú uložené vo vašom prehliadači iba s vaším súhlasom. Máte tiež možnosť zrušiť tieto cookies. Zrušenie niektorých z týchto súborov cookies však môže ovplyvniť váš zážitok z prehliadania.</div>
 <!-- categories start -->
 <div class="cmplz-categories">
 <details class="cmplz-category cmplz-functional">
 <summary>
 <span class="cmplz-category-header">
-<span class="cmplz-category-title">Funkčné</span>
+<span class="cmplz-category-title">Nevyhnutné</span>
 <span class="cmplz-always-active">
 <span class="cmplz-banner-checkbox">
 <input class="cmplz-consent-checkbox cmplz-functional" data-category="cmplz_functional" id="cmplz-functional-optin" size="40" type="checkbox" value="1"/>
-<label class="cmplz-label" for="cmplz-functional-optin" tabindex="0"><span class="screen-reader-text">Funkčné</span></label>
+<label class="cmplz-label" for="cmplz-functional-optin" tabindex="0"><span class="screen-reader-text">Nevyhnutné</span></label>
 </span>
-								Vždy aktívny							</span>
+								Vždy zapnuté							</span>
 <span class="cmplz-icon cmplz-open">
 <svg height="18" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg>
 </span>
 </span>
 </summary>
 <div class="cmplz-description">
-<span class="cmplz-description-functional">Technické uloženie alebo prístup sú nevyhnutne potrebné na legitímny účel umožnenia použitia konkrétnej služby, ktorú si účastník alebo používateľ výslovne vyžiadal, alebo na jediný účel vykonania prenosu komunikácie cez elektronickú komunikačnú sieť.</span>
 </div>
 </details>
 <details class="cmplz-category cmplz-preferences">
@@ -240,16 +329,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </span>
 </summary>
 <div class="cmplz-description">
-<span class="cmplz-description-preferences">Technické uloženie alebo prístup je potrebný na legitímny účel ukladania preferencií, ktoré si účastník alebo používateľ nepožaduje.</span>
 </div>
 </details>
 <details class="cmplz-category cmplz-statistics">
 <summary>
 <span class="cmplz-category-header">
-<span class="cmplz-category-title">Štatistiky</span>
+<span class="cmplz-category-title">Štatistické</span>
 <span class="cmplz-banner-checkbox">
 <input class="cmplz-consent-checkbox cmplz-statistics" data-category="cmplz_statistics" id="cmplz-statistics-optin" size="40" type="checkbox" value="1"/>
-<label class="cmplz-label" for="cmplz-statistics-optin" tabindex="0"><span class="screen-reader-text">Štatistiky</span></label>
+<label class="cmplz-label" for="cmplz-statistics-optin" tabindex="0"><span class="screen-reader-text">Štatistické</span></label>
 </span>
 <span class="cmplz-icon cmplz-open">
 <svg height="18" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg>
@@ -264,10 +352,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <details class="cmplz-category cmplz-marketing">
 <summary>
 <span class="cmplz-category-header">
-<span class="cmplz-category-title">Marketing</span>
+<span class="cmplz-category-title">Funkčné</span>
 <span class="cmplz-banner-checkbox">
 <input class="cmplz-consent-checkbox cmplz-marketing" data-category="cmplz_marketing" id="cmplz-marketing-optin" size="40" type="checkbox" value="1"/>
-<label class="cmplz-label" for="cmplz-marketing-optin" tabindex="0"><span class="screen-reader-text">Marketing</span></label>
+<label class="cmplz-label" for="cmplz-marketing-optin" tabindex="0"><span class="screen-reader-text">Funkčné</span></label>
 </span>
 <span class="cmplz-icon cmplz-open">
 <svg height="18" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"></path></svg>
@@ -290,8 +378,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="cmplz-buttons">
 <button class="cmplz-btn cmplz-accept">Prijať</button>
 <button class="cmplz-btn cmplz-deny">Odmietnuť</button>
-<button class="cmplz-btn cmplz-view-preferences">Zobraziť predvoľby</button>
-<button class="cmplz-btn cmplz-save-preferences">Uložiť predvoľby</button>
+<button class="cmplz-btn cmplz-view-preferences">Nastavenie</button>
+<button class="cmplz-btn cmplz-save-preferences">Uložiť</button>
 <a class="cmplz-btn cmplz-manage-options tcf cookie-statement" data-relative_url="#cmplz-manage-consent-container" href="index.html#">Zobraziť predvoľby</a>
 </div>
 <div class="cmplz-links cmplz-documents">
@@ -649,7 +737,6 @@ var chaty_settings = {"ajax_url":"https:\/\/mamnarok.sk\/wp-admin\/admin-ajax.ph
 var complianz = {"prefix":"cmplz_","user_banner_id":"1","set_cookies":[],"block_ajax_content":"","banner_version":"181","version":"7.1.5","store_consent":"","do_not_track_enabled":"","consenttype":"optin","region":"eu","geoip":"","dismiss_timeout":"","disable_cookiebanner":"","soft_cookiewall":"","dismiss_on_scroll":"","cookie_expiry":"365","url":"https:\/\/mamnarok.sk\/wp-json\/complianz\/v1\/","locale":"lang=sk&locale=sk_SK","set_cookies_on_root":"","cookie_domain":"","current_policy_id":"16","cookie_path":"\/","categories":{"statistics":"\u0161tatistiky","marketing":"marketing"},"tcf_active":"","placeholdertext":"Kliknut\u00edm prijmete s\u00fabory cookie {category} a povol\u00edte tento obsah","css_file":"https:\/\/mamnarok.sk\/wp-content\/uploads\/complianz\/css\/banner-{banner_id}-{type}.css?v=181","page_links":{"eu":{"cookie-statement":{"title":"","url":"https:\/\/mamnarok.sk\/"}}},"tm_categories":"","forceEnableStats":"","preview":"","clean_cookies":"","aria_label":"Kliknut\u00edm prijmete s\u00fabory cookie {category} a povol\u00edte tento obsah"};
 /* ]]> */
 </script>
-<script defer="" id="cmplz-cookiebanner-js" src="https://mamnarok.sk/wp-content/plugins/complianz-gdpr/cookiebanner/js/complianz.min.js?ver=1732633642" type="text/javascript"></script>
 <script id="oxygen-aos-js" src="https://mamnarok.sk/wp-content/plugins/oxygen/component-framework/vendor/aos/aos.js?ver=1" type="text/javascript"></script>
 <script id="extras-inert-js" src="https://mamnarok.sk/wp-content/plugins/oxyextras/components/assets/inert.js?ver=1.0.0" type="text/javascript"></script>
 <script id="extras-offcanvas-js" src="https://mamnarok.sk/wp-content/plugins/oxyextras/components/assets/offcanvas-init.js?ver=1.0.4" type="text/javascript"></script>
@@ -859,7 +946,154 @@ ready(() => {
 </a>
 </div>
 </div>
-<script defer="True" src="contact-widget.js"></script></body>
+<script defer="True" src="contact-widget.js"></script>
+<style>
+#mn-cookie-banner {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 99999;
+  background: #111; color: #fff; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
+  box-shadow: 0 -10px 30px rgba(0,0,0,.35);
+}
+#mn-cookie-banner .mn-wrap {
+  max-width: 1100px; margin: 0 auto; padding: 16px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; justify-content: space-between;
+}
+#mn-cookie-banner .mn-text { flex: 1 1 60%; font-size: .95rem; opacity: .95; }
+#mn-cookie-banner .mn-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+#mn-cookie-banner button {
+  border: 1px solid #ccc; border-radius: 8px; padding: 10px 14px; font-weight: 700; cursor: pointer; font-size: .92rem;
+}
+#mn-cookie-banner .mn-accept { background: #7B4B28; color: #fff; border: none; }
+#mn-cookie-banner .mn-decline { background: #fff; color: #000; }
+#mn-cookie-banner .mn-settings { background: #fff; color: #000; }
+
+/* Nastavenia */
+#mn-cookie-settings {
+  position: fixed; inset: 0; display: none; z-index: 100000;
+  background: rgba(0,0,0,.6); align-items: center; justify-content: center; padding: 24px;
+}
+#mn-cookie-settings .mn-modal {
+  background: #111; color: #fff; width: min(800px, 92vw); border-radius: 14px; box-shadow: 0 20px 60px rgba(0,0,0,.5);
+}
+#mn-cookie-settings .mn-header { padding: 18px 20px; border-bottom: 1px solid rgba(255,255,255,.08); display: flex; justify-content: space-between; align-items: center; }
+#mn-cookie-settings .mn-header h3 { margin: 0; font-size: 1.1rem; }
+#mn-cookie-settings .mn-body { padding: 8px 6px 6px; }
+.mn-cat { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px; padding: 12px 16px; border-top: 1px solid rgba(255,255,255,.08); }
+.mn-cat:first-child { border-top: 0; }
+.mn-cat .mn-name { font-weight: 700; }
+.mn-cat .mn-desc { opacity: .85; font-size: .92rem; margin-top: 4px; }
+
+/* Prepínače namiesto selectov */
+.mn-switch { --w: 48px; --h: 26px; position: relative; width: var(--w); height: var(--h); }
+.mn-switch input { position: absolute; inset: 0; opacity: 0; }
+.mn-switch .track {
+  width: 100%; height: 100%; border-radius: var(--h);
+  background: #333; box-shadow: inset 0 0 0 1px rgba(255,255,255,.15);
+  transition: background .2s ease;
+}
+.mn-switch .thumb {
+  position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%;
+  background: #fff; transition: left .2s ease;
+}
+.mn-switch input:checked + .track { background: #7B4B28; }
+.mn-switch input:checked + .track + .thumb { left: calc(100% - 23px); }
+
+.mn-pill { font-size: .78rem; opacity: .85; padding: 4px 8px; border-radius: 999px; background: #222; border: 1px solid rgba(255,255,255,.15); }
+
+#mn-cookie-settings .mn-footer { display: flex; justify-content: flex-end; gap: 10px; padding: 16px; border-top: 1px solid rgba(255,255,255,.08); }
+#mn-cookie-settings .mn-btn { border: 1px solid #ccc; border-radius: 8px; padding: 10px 14px; font-weight: 700; cursor: pointer; font-size: .92rem; }
+#mn-cookie-settings .mn-save { background: #7B4B28; color: #fff; border: none; }
+#mn-cookie-settings .mn-cancel { background: #fff; color: #000; }
+
+@media (max-width: 640px){
+  #mn-cookie-banner .mn-wrap { align-items: flex-start; }
+}
+</style>
+
+<div id="mn-cookie-banner" role="region" aria-label="Cookie banner">
+  <div class="mn-wrap">
+    <div class="mn-text">
+      Táto webová stránka používa súbory cookies na zlepšenie vášho zážitku pri prechádzaní webom. Z nich sa vo vašom prehliadači ukladajú súbory cookies, ktoré sú kategorizované podľa potreby, pretože sú nevyhnutné pre fungovanie základných funkcií webovej stránky. Používame aj cookies tretích strán, ktoré nám pomáhajú analyzovať a pochopiť, ako používate túto webovú stránku. Tieto cookies budú uložené vo vašom prehliadači iba s vaším súhlasom. Máte tiež možnosť zrušiť tieto cookies. Zrušenie niektorých z týchto súborov cookies však môže ovplyvniť váš zážitok z prehliadania.
+    </div>
+    <div class="mn-actions">
+      <button class="mn-decline" type="button" onclick="mnDecline()">Odmietnuť</button>
+      <button class="mn-settings" type="button" onclick="document.getElementById('mn-cookie-settings').style.display='flex'">Nastavenie</button>
+      <button class="mn-accept" type="button" onclick="mnAcceptAll()">Prijať</button>
+    </div>
+  </div>
+</div>
+
+<div id="mn-cookie-settings" role="dialog" aria-modal="true" aria-label="Nastavenia cookies">
+  <div class="mn-modal">
+    <div class="mn-header">
+      <h3>Nastavenia cookies</h3>
+      <button class="mn-cancel mn-btn" type="button" onclick="document.getElementById('mn-cookie-settings').style.display='none'">✕</button>
+    </div>
+    <div class="mn-body">
+      <div class="mn-cat">
+        <div>
+          <div class="mn-name">Funkčné</div>
+          <div class="mn-desc">Nevyhnutné pre správny chod webu. <span class="mn-pill">Vždy zapnuté</span></div>
+        </div>
+        <div class="mn-pill">Zapnuté</div>
+      </div>
+      <div class="mn-cat">
+        <div>
+          <div class="mn-name">Štatistické</div>
+          <div class="mn-desc">Pomáhajú nám pochopiť, ako sa web používa (anonymne).</div>
+        </div>
+        <label class="mn-switch" aria-label="Štatistické">
+          <input type="checkbox" id="mn-stats">
+          <span class="track"></span><span class="thumb"></span>
+        </label>
+      </div>
+      <div class="mn-cat">
+        <div>
+          <div class="mn-name">Marketingové</div>
+          <div class="mn-desc">Používané na personalizáciu reklamy.</div>
+        </div>
+        <label class="mn-switch" aria-label="Marketingové">
+          <input type="checkbox" id="mn-marketing">
+          <span class="track"></span><span class="thumb"></span>
+        </label>
+      </div>
+    </div>
+    <div class="mn-footer">
+      <button class="mn-cancel mn-btn" type="button" onclick="document.getElementById('mn-cookie-settings').style.display='none'">Odmietnuť</button>
+      <button class="mn-save mn-btn" type="button" onclick="mnSaveSettings()">Prijať</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const BANNER_ID = 'mn-cookie-banner';
+  const SETTINGS_ID = 'mn-cookie-settings';
+  const KEY = 'mn_cookie_consent';
+
+  function hideAll(){ 
+    var b=document.getElementById(BANNER_ID); if(b) b.remove();
+    var s=document.getElementById(SETTINGS_ID); if(s) s.remove();
+  }
+  window.mnAcceptAll = function(){
+    try{ localStorage.setItem(KEY, JSON.stringify({stats:true, marketing:true, ts:Date.now()})); }catch(e){}
+    hideAll();
+  }
+  window.mnSaveSettings = function(){
+    const stats = document.getElementById('mn-stats')?.checked || false;
+    const marketing = document.getElementById('mn-marketing')?.checked || false;
+    try{ localStorage.setItem(KEY, JSON.stringify({stats, marketing, ts:Date.now()})); }catch(e){}
+    hideAll();
+  }
+  window.mnDecline = function(){
+    try{ localStorage.setItem(KEY, JSON.stringify({stats:false, marketing:false, ts:Date.now()})); }catch(e){}
+    hideAll();
+  }
+  try{
+    const v = JSON.parse(localStorage.getItem(KEY) || 'null');
+    if(v){ hideAll(); }
+  }catch(e){}
+})();
+</script>
+</body>
 </html>
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
