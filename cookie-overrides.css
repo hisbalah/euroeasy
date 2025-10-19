@@ -5,280 +5,114 @@
   transform: translateX(-50%) !important;
   margin: 0 auto !important;
 }
-
+.cmplz-cookiebanner { max-width: min(680px, 92vw) !important; width: auto !important; }
 .cmplz-logo, .cmplz-header .cmplz-logo, .cmplz-header img.cmplz-logo, .cmplz-header .cmplz-brand, .cmplz-modal .cmplz-logo { display: none !important; }
 .cmplz-header a img, .cmplz-header img { display: none !important; }
 .cmplz-modal, .cmplz-preferences { left: 50% !important; right: auto !important; transform: translateX(-50%) !important; }
 .cmplz-cookiebanner, .cmplz-modal { z-index: 99999 !important; }
 
-/* === Farba tlačidla "Prijať" (Complianz accept) – béžová D4B483 === */
-.cmplz-cookiebanner .cmplz-buttons .cmplz-accept.cmplz-btn,
-.cmplz-btn.cmplz-accept,
-button.cmplz-btn.cmplz-accept {
-  background-color: #D4B483 !important;
-  border-color: #D4B483 !important;
-  color: #000 !important;
-}
-.cmplz-cookiebanner .cmplz-buttons .cmplz-accept.cmplz-btn:hover,
-.cmplz-btn.cmplz-accept:hover,
-button.cmplz-btn.cmplz-accept:hover,
-.cmplz-cookiebanner .cmplz-buttons .cmplz-accept.cmplz-btn:focus,
-.cmplz-btn.cmplz-accept:focus,
-button.cmplz-btn.cmplz-accept:focus {
-  background-color: #D4B483 !important;
-  border-color: #D4B483 !important;
-  color: #000 !important;
-  filter: brightness(0.95);
-  outline: none;
-}
-
-/* === Cookie banner cez celú šírku === */
-.cmplz-cookiebanner {
-  max-width: 100% !important;
-  width: 100% !important;
-  left: 0 !important;
-  right: 0 !important;
-  transform: none !important;
-  margin: 0 !important;
-  border-radius: 0 !important;
-}
-
-/* Text v bannery vycentrovaný a pekne rozložený */
-.cmplz-cookiebanner .cmplz-message {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Tlačidlá vycentrované a rozostupy */
-.cmplz-cookiebanner .cmplz-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-/* === Cookie banner: vľavo, 80% šírky, pri spodnom okraji === */
-.cmplz-cookiebanner {
-  position: fixed !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  right: auto !important;
-  h !important;
-  h !important;
-  transform: none !important;
-  margin: 0 0 0 20px !important; /* mierne odsadenie zľava */
-  border-radius: 8px 8px 0 0 !important; /* zaoblenie horných rohov */
-  z-index: 99999 !important;
-}
-
-/* Text zalamovaný cez celú šírku banneru */
-.cmplz-cookiebanner .cmplz-message {
-  max-width: 100%;
-  padding: 20px;
-  text-align: left;
-  white-space: normal;
-  word-break: break-word;
-}
-
-/* Tlačidlá zarovnané vľavo pod textom */
-.cmplz-cookiebanner .cmplz-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-start;
-  padding: 0 20px 20px 20px;
-}
-
-/* === Cookie banner: vľavo, 80 % šírky, nalepený dole === */
-body .cmplz-cookiebanner {
-  position: fixed !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  right: auto !important;
-  h !important;
-  h !important;
-  transform: none !important;
-  margin: 0 !important;
-  border-radius: 8px 8px 0 0 !important;
-  z-index: 99999 !important;
-  justify-content: flex-start !important;
-  align-items: flex-start !important;
-  text-align: left !important;
-}
-
-/* Odstráni pôvodné centrovanie Complianz */
-body .cmplz-cookiebanner.cmplz-right,
-body .cmplz-cookiebanner.cmplz-bottom,
-body .cmplz-cookiebanner.cmplz-bottom-right {
-  left: 0 !important;
-  transform: none !important;
-  right: auto !important;
-  margin: 0 !important;
-}
-
-/* Text na celú šírku banneru */
-body .cmplz-cookiebanner .cmplz-message {
-  max-width: 100% !important;
-  width: 100% !important;
-  padding: 20px;
-  text-align: left !important;
-  white-space: normal !important;
-  word-break: break-word;
-  display: block;
-}
-
-/* Tlačidlá pod textom vľavo */
-body .cmplz-cookiebanner .cmplz-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-start;
-  padding: 0 20px 20px 20px;
-  width: 100% !important;
-}
-
-/* === Úprava medzier v cookie bannery === */
-
-/* Menšia medzera medzi nadpisom a textom */
-body .cmplz-cookiebanner .cmplz-title {
-  margin-bottom: 0.5em !important; /* približne tretina pôvodnej medzery */
-}
-
-/* Menšia medzera medzi textom a tlačidlami */
-body .cmplz-cookiebanner .cmplz-message {
-  padding-bottom: 10px !important; /* menej priestoru pod textom */
-}
-
-/* Odstránenie nepotrebného priestoru pod tlačidlami */
-body .cmplz-cookiebanner .cmplz-buttons {
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-/* === Sprísnené medzery === */
-
-/* Minimálna medzera medzi nadpisom a textom */
-body .cmplz-cookiebanner .cmplz-title {
-  margin-bottom: 2px !important;
-  padding-bottom: 0 !important;
-}
-
-/* Minimálna medzera medzi textom a tlačidlami */
-body .cmplz-cookiebanner .cmplz-message {
-  padding-bottom: 2px !important;
-  margin-bottom: 0 !important;
-}
-
-/* === Cookie banner: vľavo, 50 % šírky === */
-body .cmplz-cookiebanner {
-  position: fixed !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  right: auto !important;
-  max-width: 50% !important;
-  width: 50% !important;
-  transform: none !important;
-  margin: 0 !important;
-  border-radius: 8px 8px 0 0 !important;
-  z-index: 99999 !important;
-  justify-content: flex-start !important;
-  align-items: flex-start !important;
-  text-align: left !important;
-}
-
-.cmplz-cookiebanner select,
-.cmplz-preferences select {
-  -webkit-appearance: none !important;
-  -moz-appearance: none !important;
-  appearance: none !important;
-  background: none !important;
-  background-image: none !important;
-}
-
-/* IE/legacy Edge šípka */
-.cmplz-cookiebanner select::-ms-expand,
-.cmplz-preferences select::-ms-expand {
-  display: none !important;
-}
-
-/* Šípka ako ::after na wrapperi (časté) */
-.cmplz-cookiebanner .cmplz-dropdown::before,
-.cmplz-cookiebanner .cmplz-dropdown::after,
-.cmplz-preferences .cmplz-dropdown::before,
-.cmplz-preferences .cmplz-dropdown::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Šípka vložená ako SVG/ikonka pri (alebo v) selecte */
-.cmplz-cookiebanner .cmplz-dropdown svg,
-.cmplz-preferences .cmplz-dropdown svg,
-.cmplz-cookiebanner select + svg,
-.cmplz-preferences select + svg,
-.cmplz-cookiebanner [class*="chevron"],
-.cmplz-preferences [class*="chevron"],
-.cmplz-cookiebanner [class*="arrow"],
-.cmplz-preferences [class*="arrow"] {
-  display: none !important;
-}
-
-/* Fallback: ak tema používa background na wrapperi ako šípku */
-.cmplz-cookiebanner .cmplz-dropdown,
-.cmplz-preferences .cmplz-dropdown {
-  background-image: none !important;
-}
-
-
-/* ==== FORCE RIGHT-ALIGN INSIDE COMPLIANZ BANNER (max specificity) ==== */
-body .cmplz-cookiebanner,
-body .cmplz-cookiebanner * { box-sizing: border-box; }
-
-/* Make the inner layout right-aligned */
-body .cmplz-cookiebanner .cmplz-inner,
-body .cmplz-cookiebanner .cmplz-message,
-body .cmplz-cookiebanner .cmplz-links,
-body .cmplz-cookiebanner .cmplz-categories {
-  text-align: right !important;
-}
-
-/* If the template centers with margins, push blocks to the right */
-body .cmplz-cookiebanner .cmplz-inner,
-body .cmplz-cookiebanner .cmplz-message,
-body .cmplz-cookiebanner .cmplz-links,
-body .cmplz-cookiebanner .cmplz-categories,
-body .cmplz-cookiebanner .cmplz-buttons {
+/* === Align MN cookie banner buttons to the RIGHT === */
+#mn-cookie-banner .mn-actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 10px !important;
   width: 100% !important;
   margin-left: auto !important;
   margin-right: 0 !important;
+  text-align: right !important;
 }
 
-/* Place buttons at the right edge */
-body .cmplz-cookiebanner .cmplz-buttons {
+/* Ensure each button sits to the right with small spacing */
+#mn-cookie-banner .mn-actions > * {
+  margin-left: 8px !important;
+}
+
+/* Optional: keep text block full width, but allow right-align if needed */
+#mn-cookie-banner .mn-message,
+#mn-cookie-banner .mn-content {
+  width: 100% !important;
+}
+
+
+/* === MN banner: tlačidlá úplne vpravo =============================== */
+#mn-cookie-banner .mn-wrap {
+  display: flex !important;
+  justify-content: flex-start !important;  /* nepoužívaj space-between, necháme auto-margin */
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+#mn-cookie-banner .mn-text {
+  flex: 1 1 auto !important;               /* text zaberie dostupné miesto vľavo */
+  text-align: left !important;
+}
+
+#mn-cookie-banner .mn-actions {
+  margin-left: auto !important;            /* toto ich odtlačí úplne doprava kontajnera */
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  justify-content: flex-end !important;
+}
+/* ==================================================================== */
+
+/* === MN banner: make content full-width and push actions to the far right === */
+#mn-cookie-banner .mn-wrap{
+  max-width: none !important;   /* stop centering at 1100px */
+  width: 100% !important;
+  justify-content: flex-start !important; /* don't space-between */
+}
+
+#mn-cookie-banner .mn-actions{
+  margin-left: auto !important; /* pushes actions to the far right edge */
   display: flex !important;
   justify-content: flex-end !important;
   align-items: center !important;
   gap: 10px !important;
+  flex-wrap: wrap !important;
 }
 
-/* Some themes wrap buttons inside another flex; ensure end alignment */
-body .cmplz-cookiebanner .cmplz-buttons > * {
-  margin-left: 8px !important;
+/* === MN cookie banner: pin to RIGHT, 50% width, bottom-fixed === */
+#mn-cookie-banner{
+  position: fixed !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  left: auto !important;
+  width: 50vw !important;       /* half of the screen */
+  max-width: 50vw !important;
+  margin: 0 !important;
+  border-radius: 8px 0 0 0 !important; /* round only top-left corner */
+  z-index: 2147483646 !important;
 }
 
-/* Optional: constrain text to right half so buttons have room below it */
-@media (min-width: 769px){
-  body .cmplz-cookiebanner .cmplz-message {
-    max-width: 60% !important;
-  }
-}
-
-/* If a higher-level container centers everything, override it */
-body .cmplz-cookiebanner .cmplz-container,
-body .cmplz-cookiebanner .cmplz-row {
+/* Make the inner wrapper fill container and hug the right edge */
+#mn-cookie-banner .mn-wrap{
+  max-width: 100% !important;
+  width: 100% !important;
   margin-left: auto !important;
   margin-right: 0 !important;
-  justify-content: flex-end !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
 }
 
+/* Ensure message spans full width; text alignment stays as you had it */
+#mn-cookie-banner .mn-message,
+#mn-cookie-banner .mn-content{
+  width: 100% !important;
+}
+
+/* Push the actions (Odmietnuť, Prijať, Nastavenia) to the FAR RIGHT */
+#mn-cookie-banner .mn-actions{
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  padding: 0 20px 20px 20px !important;
+}
