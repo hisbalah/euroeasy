@@ -1,0 +1,36 @@
+
+/* === Euroeasy mobile hamburger: nahradenie SVG vlastným 4-bar hamburgerom === */
+@media (max-width: 768px){
+  #div_block-19-1546 {
+    position: fixed !important;
+    top: 16px !important;
+    right: 16px !important;
+    width: 32px !important;
+    height: 32px !important;
+    z-index: 2147483646 !important;
+    display: inline-block !important;
+    cursor: pointer;
+  }
+
+  /* Vymažeme všetko vnútri, keby tam niečo zostalo (SVG, obrázok, text) */
+  #div_block-19-1546 * {
+    display: none !important;
+  }
+
+  /* Nová 4-čiarková ikona */
+  #div_block-19-1546::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    width: 24px !important;
+    height: 2px !important;
+    background: #000 !important;
+    transform: translate(-50%, -50%) !important;
+    border-radius: 1px !important;
+    box-shadow:
+      0 -6px 0 0 #000,
+      0 6px 0 0 #000,
+      0 12px 0 0 #000 !important; /* spolu 4 čiarky */
+  }
+}
