@@ -299,6 +299,64 @@ body.dark-mode{
 
 
 
+
+<style id="extra-ellipse-track">
+/* Put the overlay just under the floating switch, above the page/photo */
+.theme-track-overlay {
+  position: fixed !important;
+  left: 20px !important;
+  bottom: 20px !important;
+  width: var(--toggle-w, 84px) !important;
+  height: var(--toggle-h, 42px) !important;
+  z-index: 2147483645 !important; /* below the switch but above the background */
+  pointer-events: none !important; /* never blocks clicks */
+}
+
+/* Draw the ellipse slightly larger than the thumb */
+.theme-track-overlay::before {
+  content: "" !important;
+  position: absolute !important;
+  left: var(--pad, 4px) !important;
+  right: var(--pad, 4px) !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  height: calc((var(--toggle-h, 42px) - (var(--pad, 4px) * 2)) + 8px) !important; /* taller than thumb */
+  border-radius: 999px !important;
+  background: #000000 !important; /* solid black track */
+  box-shadow: inset 0 2px 6px rgba(255,255,255,.06), 0 1px 6px rgba(0,0,0,.7) !important;
+}
+
+/* Ensure the switch floats above the overlay */
+.theme-floating-switch { z-index: 2147483646 !important; }
+</style>
+
+
+<style id="extra-ellipse-track-fix">
+.theme-track-overlay::before {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  height: calc((var(--toggle-h, 42px) - (var(--pad, 4px) * 2))) !important; /* exactly thumb height */
+}
+</style>
+
+
+<style id="extra-ellipse-track-align-top">
+.theme-track-overlay::before {
+  top: var(--pad, 4px) !important;                 /* align to thumb's top */
+  transform: none !important;                      /* no vertical centering */
+  height: calc(var(--toggle-h, 42px) - (var(--pad, 4px) * 2)) !important;  /* exactly thumb height */
+}
+</style>
+
+
+<style id="extra-ellipse-track-align-top-8px">
+.theme-track-overlay::before {
+  top: calc(var(--pad, 4px) - 8px) !important;     /* move 8px higher */
+  transform: none !important;
+  height: calc(var(--toggle-h, 42px) - (var(--pad, 4px) * 2)) !important;
+}
+</style>
+
 </head>
 <body class="home page-template-default page page-id-1551 wp-custom-logo wp-embed-responsive oxygen-body" data-cmplz="0" data-rsssl="1">
 <!-- Google Tag Manager (noscript) -->
@@ -1241,6 +1299,9 @@ ready(() => {
   });
 })();
 </script>
+
+<div class="theme-track-overlay" aria-hidden="true"></div>
+
 </body>
 </html>
 <!--
