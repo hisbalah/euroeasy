@@ -230,3 +230,55 @@ body .cmplz-cookiebanner {
   background-image: none !important;
 }
 
+
+/* ==== FORCE RIGHT-ALIGN INSIDE COMPLIANZ BANNER (max specificity) ==== */
+body .cmplz-cookiebanner,
+body .cmplz-cookiebanner * { box-sizing: border-box; }
+
+/* Make the inner layout right-aligned */
+body .cmplz-cookiebanner .cmplz-inner,
+body .cmplz-cookiebanner .cmplz-message,
+body .cmplz-cookiebanner .cmplz-links,
+body .cmplz-cookiebanner .cmplz-categories {
+  text-align: right !important;
+}
+
+/* If the template centers with margins, push blocks to the right */
+body .cmplz-cookiebanner .cmplz-inner,
+body .cmplz-cookiebanner .cmplz-message,
+body .cmplz-cookiebanner .cmplz-links,
+body .cmplz-cookiebanner .cmplz-categories,
+body .cmplz-cookiebanner .cmplz-buttons {
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+/* Place buttons at the right edge */
+body .cmplz-cookiebanner .cmplz-buttons {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+/* Some themes wrap buttons inside another flex; ensure end alignment */
+body .cmplz-cookiebanner .cmplz-buttons > * {
+  margin-left: 8px !important;
+}
+
+/* Optional: constrain text to right half so buttons have room below it */
+@media (min-width: 769px){
+  body .cmplz-cookiebanner .cmplz-message {
+    max-width: 60% !important;
+  }
+}
+
+/* If a higher-level container centers everything, override it */
+body .cmplz-cookiebanner .cmplz-container,
+body .cmplz-cookiebanner .cmplz-row {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  justify-content: flex-end !important;
+}
+
