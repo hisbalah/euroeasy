@@ -1330,3 +1330,33 @@ Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3
 
 Served from: mamnarok.sk @ 2025-10-16 21:47:54 by W3 Total Cache
 -->
+
+/* === Responsive Mobile Fix: posunutý banner a tlačidlá doprava === */
+@media (max-width: 768px) {
+  #mn-cookie-banner {
+    width: 90vw !important;     /* necháme miesto pre prepínač vľavo */
+    left: auto !important;
+    right: 0 !important;        /* banner posunutý doprava */
+    max-width: 90vw !important;
+  }
+
+  #mn-cookie-banner .mn-wrap {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  #mn-cookie-banner .mn-actions {
+    justify-content: flex-end !important;
+    padding-left: 20px !important;
+    padding-right: 10px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  #mn-cookie-banner .mn-actions > * {
+    flex: 0 0 auto !important;
+  }
+}
