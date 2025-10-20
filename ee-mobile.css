@@ -105,3 +105,12 @@
   /* Backdrop nechaj fullscreen, ten neriešime */
   .ee-backdrop{ inset: 0 !important; }
 }
+
+@media (max-width: 1024px){
+  /* zväčšenie písma v hamburgerovom menu */
+  .ee-menu-panel a,
+  #-pro-menu-32-1546 a {
+    font-size: 20px !important;   /* ⬅️ tu zmeň veľkosť podľa potreby (napr. 18px, 20px, 22px) */
+    font-weight: 600;             /* tu môžeš dať aj bold alebo iné */
+  }
+}
