@@ -69,3 +69,39 @@
   /* Prevent body scroll when menu open */
   body.menu-open{ overflow: hidden; }
 }
+
+/* --- MENU: výška podľa obsahu, nie fullscreen --- */
+@media (max-width: 1024px){
+
+  /* Ak používaš naše vlastné menu (ee-menu-panel) */
+  .ee-menu-panel{
+    height: auto !important;                 /* výška podľa obsahu */
+    max-height: calc(100svh - 40px) !important; /* bezpečnostný strop, aby nepretieklo mimo obrazovky */
+    top: 12px !important;                    /* kúsok pod horný okraj */
+    bottom: auto !important;                 /* zrušiť kotvenie k spodku, ak tam bolo */
+    right: 12px !important;                  /* jemný odsuv od pravého okraja */
+    width: max-content !important;           /* šírka podľa obsahu (menu textov) */
+    min-width: 260px !important;             /* minimálna šírka, nech to nie je úzke */
+    max-width: 90vw !important;              /* nech sa zmestí na mobil */
+    overflow-y: auto !important;             /* ak by položiek bolo veľa, umožni posun */
+    border-radius: 12px !important;          /* estetika, voliteľné */
+  }
+
+  /* Ak na niektorých stránkach beží Oxygen Pro Menu panel (#-pro-menu-32-1546), uprav aj jeho */
+  #-pro-menu-32-1546{
+    height: auto !important;
+    max-height: calc(100svh - 40px) !important;
+    top: 12px !important;
+    bottom: auto !important;
+    right: 12px !important;
+    width: max-content !important;
+    min-width: 260px !important;
+    max-width: 90vw !important;
+    overflow-y: auto !important;
+    border-radius: 12px !important;
+    /* zvyšok (transform/transition/z-index) nechaj tak, tie už máš nastavené */
+  }
+
+  /* Backdrop nechaj fullscreen, ten neriešime */
+  .ee-backdrop{ inset: 0 !important; }
+}
