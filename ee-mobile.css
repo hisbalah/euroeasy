@@ -163,7 +163,7 @@
     /* pôvodne ~14px -> +30% ≈ 18px */
     padding: 18px 8px !important;      /* väčší vertikálny rozostup */
     text-align: left !important;       /* zarovnanie doľava */
-    color: #fff !important;            /* biele písmo */
+    color: #FFFFFF !important;            /* biele písmo */
     font-size: 20px !important;
     font-weight: 600 !important;
     text-decoration: none !important;
