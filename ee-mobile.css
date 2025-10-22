@@ -155,7 +155,7 @@
     width: 100% !important;
   }
   .ee-menu-panel li{
-    border-bottom: 3px solid rgba(255,255,255,0.4) !important;
+    border-bottom: 2px solid #FFFFFF !important;
   }
   .ee-menu-panel a{
     display: block !important;
