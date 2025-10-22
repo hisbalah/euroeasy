@@ -260,3 +260,40 @@ body.menu-open .ee-menu-panel{ transform: translateY(0); }
   /* 5) Zákaz scrollovania pozadia pri otvorenom menu */
   body.menu-open{ height: 100svh !important; overflow: hidden !important; }
 }
+
+@media (max-width: 1024px) {
+  #_header-3-1546 img[src*="logo.png"] {
+    height: 40px;      /* menšie logo na mobile */
+    margin-left: 6px;
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 1025px) {
+  #_header-3-1546 img[src*="logo.png"] {
+    height: 60px;      /* väčšie logo na desktope */
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+}
+/* 1) Zruš padding hlavičky, aby logo mohlo ísť úplne k ľavému okraju */
+#_header-3-1546 {
+  padding-left: 0 !important;
+  display: flex;
+  align-items: center;     /* vertikálne vycentrovanie loga */
+  justify-content: flex-start; /* logo ostane nalavo */
+}
+
+/* 2) Obrázok loga — veľkosť podľa reálneho obrázka */
+#_header-3-1546 img[src*="logo.png"] {
+  height: auto;        /* ponechaj pôvodnú výšku obrázka */
+  width: auto;         /* zachová pomer strán */
+  max-height: 60px;    /* ak chceš mať max. výšku loga */
+  object-fit: contain;
+  margin-left: 0;      /* žiadne dodatočné odsadenie */
+  display: block;
+}
+
+#_header-3-1546 img[src*="logo.png"] {
+  transform: scale(2.2);  /* 1.0 = pôvodná veľkosť, 1.2 = zväčšené o 20 % */
+  transform-origin: left center; /* nech sa zväčšuje smerom doprava */
