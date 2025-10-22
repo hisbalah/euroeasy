@@ -1,46 +1,27 @@
-:root {
-  --gold: #FFD700;
-  --shadow-lg: 0 16px 38px rgba(0,0,0,.24);
-  --shadow: 0 12px 28px rgba(0,0,0,.2);
-  --shadow-sm: 0 8px 20px rgba(0,0,0,.16);
-}
+:root{ --gold:#FFD700; --shadow-lg:0 16px 38px rgba(0,0,0,.24); --shadow:0 12px 28px rgba(0,0,0,.2); --shadow-sm:0 8px 20px rgba(0,0,0,.16);}
+.contact-launcher{position:fixed;right:28px;bottom:28px;z-index:9999;font-family:system-ui,Segoe UI,Roboto,sans-serif;display:flex;align-items:center;gap:12px}
+.launcher-label{background:#fff;color:#111827;padding:10px 16px;border-radius:9999px;font-weight:700;box-shadow:var(--shadow-sm);user-select:none;white-space:nowrap}
+.launcher-circle{width:72px;height:72px;border-radius:50%;border:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:var(--gold);color:#fff;box-shadow:var(--shadow-lg);transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;will-change:transform}
+.launcher-circle:hover{transform:translateY(-2px) scale(1.03);filter:brightness(1.03)}
+.launcher-circle:active{transform:translateY(0) scale(1)}
+.launcher-circle i{position:absolute;font-size:30px;line-height:1}
+.icon-comment{animation:breathe 2.2s ease-in-out infinite,spin360 5s linear infinite,glow 2.6s ease-in-out infinite;transform-origin:50% 60%}
+@keyframes breathe{0%,100%{transform:translateY(0) scale(1);opacity:1}50%{transform:translateY(-2.5px) scale(1.32);opacity:.98}}
+@keyframes spin360{0%{rotate:0deg}90%{rotate:0deg}100%{rotate:360deg}}
+@keyframes glow{0%,100%{text-shadow:0 0 0 rgba(255,255,255,0)}50%{text-shadow:0 0 12px rgba(255,255,255,.35)}}
+.icon-close{opacity:0;transform:rotate(-45deg) scale(.8);transition:opacity .2s ease,transform .2s ease}
+.channel-stack{position:absolute;right:0;bottom:92px;display:flex;flex-direction:column;align-items:center;gap:14px;pointer-events:none;opacity:0;transform:translateY(14px);transition:opacity .25s ease,transform .25s ease}
+.channel-btn{width:64px;height:64px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:#fff;box-shadow:var(--shadow);transform:translateY(10px) scale(.94);opacity:0;transition:transform .34s cubic-bezier(.2,.8,.2,1),opacity .34s ease,box-shadow .2s ease;will-change:transform,opacity}
+.channel-btn:hover{transform:translateY(0) scale(1.04);box-shadow:var(--shadow-lg)}
+.channel-btn i{font-size:26px}
+.channel-btn.whatsapp{background:#25D366}.channel-btn.facebook{background:#1877F2}.channel-btn.email{background:#6B7280}.channel-btn.phone{background:#0F172A}
+.contact-launcher.open .channel-stack{pointer-events:auto;opacity:1;transform:translateY(0)}
+.contact-launcher.open .channel-btn{opacity:1;transform:translateY(0) scale(1.02)}
+.contact-launcher.open .channel-btn:nth-child(1){transition-delay:.05s}
+.contact-launcher.open .channel-btn:nth-child(2){transition-delay:.10s}
+.contact-launcher.open .channel-btn:nth-child(3){transition-delay:.15s}
+.contact-launcher.open .channel-btn:nth-child(4){transition-delay:.20s}
+.contact-launcher.open .icon-comment{opacity:0;transform:translateY(4px) rotate(10deg) scale(.9);animation:none}
+.contact-launcher.open .icon-close{opacity:1;transform:rotate(0deg) scale(1)}
+#chaty-widget,.cht-widget,.cht-app,.chaty-widget{display:none!important}
 
-.contact-launcher {
-  position: fixed;
-  right: 28px;
-  bottom: 28px;
-  z-index: 9999;
-  font-family: system-ui, Segoe UI, Roboto, sans-serif;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.launcher-label {
-  background: #fff;
-  color: #111827;
-  padding: 10px 16px;
-  border-radius: 9999px;
-  font-weight: 700;
-  box-shadow: var(--shadow-sm);
-  user-select: none;
-  white-space: nowrap;
-}
-
-.launcher-circle {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  background: var(--gold);
-  color: #fff;
-  box-shadow: var(--shadow-lg);
-  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
-  will-change: transform;
-}
