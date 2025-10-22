@@ -10,7 +10,7 @@
   /* Burger button */
   #ee-burger{
     position: fixed;
-    top: 12px; right: 12px;
+    top: 45px; right: 12px;
     width: 36px; height: 36px;
     background: transparent; border: 0; padding: 0;
     cursor: pointer;
@@ -79,15 +79,7 @@ body.menu-open .ee-menu-panel{ transform: translateY(0); }
     font-weight: 600;             /* tu môžeš dať aj bold alebo iné */
   }
 }
-@media (max-width: 1024px){
-  /* Posuň hamburger nižšie – doladíš len číslo top podľa výšky hlavičky */
-  #ee-burger{
-    position: fixed !important;
-    top: 48px !important;     /* <- uprav podľa potreby (napr. 44–56px) */
-    right: 0px !important;
-    z-index: 2147483647 !important;
-  }
-}
+
 /* === 
 -WIDTH top-down mobile menu: bg #D4B483, white links, +30% spacing === */
 @media (max-width: 1024px){
