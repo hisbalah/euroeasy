@@ -60,6 +60,13 @@
   font-size: 30px;
   line-height: 1;
 }
+.launcher-circle{
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  overflow: hidden;                     /* dôležité, nech nič „nekvadratí“ okraj */
+  -webkit-tap-highlight-color: transparent;  /* iOS/Android */
+}
 
 .icon-comment {
   transform-origin: 50% 60%;
