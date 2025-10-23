@@ -45,20 +45,7 @@
   transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
   will-change: transform;
 
-  .launcher-circle {
-  outline: none;
-  -webkit-tap-highlight-color: transparent; /* odstráni štvorec na mobile */
-}
-
-.launcher-circle:focus,
-.launcher-circle:focus-visible {
-  outline: none;               /* odstráni rámček po kliknutí */
-  box-shadow: none;            /* ak by si mal ešte aj nejaký vlastný tieň */
-}
-
-.launcher-circle::-moz-focus-inner {
-  border: 0;                   /* špeciálne pre Firefox */
-}
+  
 }
 
 .launcher-circle:hover {
