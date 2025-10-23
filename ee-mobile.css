@@ -275,3 +275,26 @@
     margin-left: 180px !important;    /* ⬅️ posunie logo doprava */
   }
 }
+/* === DESKTOP CLEANUP: skry mobilné prvky na desktope (≥1025px) === */
+@media (min-width: 1025px){
+
+  /* 1) Schovaj vlastný mobilný burger #ee-burger na desktope */
+  #ee-burger{
+    display: none !important;
+  }
+@media (max-width: 1024px){
+  .ee-menu-footer{
+    position: fixed;
+    left: 0; right: 0; bottom: 20px;
+    display: flex; justify-content: center; align-items: center;
+    z-index: 2147483647;       /* nad béžovým pozadím */
+    pointer-events: none;      /* neblokuje kliky v menu */
+  }
+  .ee-logo-img{
+    width: 140px; height: auto; display: block;
+    opacity: .9;
+    /* nechaj, ak chceš bielu „siluetu“ farebného PNG */
+    /* filter: brightness(0) invert(1); */
+    pointer-events: none;
+  }
+}
