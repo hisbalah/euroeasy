@@ -1,7 +1,7 @@
 :root{ --gold:#FFD700; --shadow-lg:0 16px 38px rgba(0,0,0,.24); --shadow:0 12px 28px rgba(0,0,0,.2); --shadow-sm:0 8px 20px rgba(0,0,0,.16);}
 .contact-launcher{position:fixed;right:28px;bottom:28px;z-index:9999;font-family:system-ui,Segoe UI,Roboto,sans-serif;display:flex;align-items:center;gap:12px}
 .launcher-label{background:#fff;color:#111827;padding:10px 16px;border-radius:9999px;font-weight:700;box-shadow:var(--shadow-sm);user-select:none;white-space:nowrap}
-.launcher-circle{width:72px;height:72px;border-radius:50%;border:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:var(--gold);color:#fff;box-shadow:var(--shadow-lg);transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;will-change:transform}
+.launcher-circle{width:102px;height:72px;border-radius:50%;border:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:var(--gold);color:#fff;box-shadow:var(--shadow-lg);transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;will-change:transform}
 .launcher-circle:hover{transform:translateY(-2px) scale(1.03);filter:brightness(1.03)}
 .launcher-circle:active{transform:translateY(0) scale(1)}
 .launcher-circle i{position:absolute;font-size:30px;line-height:1}
@@ -11,7 +11,7 @@
 @keyframes glow{0%,100%{text-shadow:0 0 0 rgba(255,255,255,0)}50%{text-shadow:0 0 12px rgba(255,255,255,.35)}}
 .icon-close{opacity:0;transform:rotate(-45deg) scale(.8);transition:opacity .2s ease,transform .2s ease}
 .channel-stack{position:absolute;right:0;bottom:92px;display:flex;flex-direction:column;align-items:center;gap:14px;pointer-events:none;opacity:0;transform:translateY(14px);transition:opacity .25s ease,transform .25s ease}
-.channel-btn{width:64px;height:64px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:#fff;box-shadow:var(--shadow);transform:translateY(10px) scale(.94);opacity:0;transition:transform .34s cubic-bezier(.2,.8,.2,1),opacity .34s ease,box-shadow .2s ease;will-change:transform,opacity}
+.channel-btn{width:94px;height:64px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:#fff;box-shadow:var(--shadow);transform:translateY(10px) scale(.94);opacity:0;transition:transform .34s cubic-bezier(.2,.8,.2,1),opacity .34s ease,box-shadow .2s ease;will-change:transform,opacity}
 .channel-btn:hover{transform:translateY(0) scale(1.04);box-shadow:var(--shadow-lg)}
 .channel-btn i{font-size:26px}
 .channel-btn.whatsapp{background:#25D366}.channel-btn.facebook{background:#1877F2}.channel-btn.email{background:#6B7280}.channel-btn.phone{background:#0F172A}
