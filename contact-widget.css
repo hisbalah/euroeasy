@@ -100,13 +100,6 @@
   transition: opacity .3s ease-in-out, transform .3s ease-in-out;
 }
 
-.contact-launcher.open .channel-stack {
-  pointer-events: auto;
-  opacity: 1; /* jemne zosilní */
-  transform: translateY(0);
-}
-}
-
 .channel-btn {
   width: 91.8px;
   height: 91.8px;
