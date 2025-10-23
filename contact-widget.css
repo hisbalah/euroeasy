@@ -28,8 +28,8 @@
 }
 
 .launcher-circle {
-  width: 72px;
-  height: 72px;
+  width: 82px;
+  height: 82px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -83,21 +83,21 @@
 .icon-close {
   opacity: 0;
   transform: rotate(-45deg) scale(.8);
-  transition: opacity .2s ease, transform .2s ease;
+  transition: opacity 0.2s ease, transform .02s ease;
 }
 
 .channel-stack {
   position: absolute;
   right: 0;
-  bottom: 92px;
+  bottom: 106px; /* väčšia medzera: 72px (button) + 34px (gap) */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 14px;
   pointer-events: none;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+  transform: translateY(10px) scale(0.95); /* menší posun, pridaný scale */
+  transition: opacity .2s ease-out, transform .2s ease-out; /* rýchlejšie */
 }
 
 .channel-btn {
@@ -110,10 +110,10 @@
   text-decoration: none;
   color: #fff;
   box-shadow: var(--shadow);
-  transform: translateY(20px);
-  opacity: 1;
-  transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity .4s cubic-bezier(0, 0, 0.1, 1), box-shadow .2s ease;
-  will-change: transform, opacity;
+  transform: scale(0.9); /* namiesto translateY - buttony sa nestrácajú */
+  opacity: 1; /* vždy viditeľné */
+  transition: transform .25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow .2s ease; /* pružná animácia */
+  will-change: transform;
 }
 
 .channel-btn:hover {
