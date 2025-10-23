@@ -31,3 +31,17 @@
   filter: none !important;
   opacity: 1 !important;
 }
+/* === Pevná výška hero / slider fotky s orezaním === */
+#section-2-1551,
+#section-2-1551 .ct-section-inner-wrap,
+#slider-3-1551,
+#slider-3-1551 .oxygen-unslider-container,
+#slide-4-1551,
+#section-2-1551 .ct-slide {
+  height: 650px !important;          /* pevná výška */
+  min-height: 650px !important;
+  max-height: 650px !important;
+  overflow: hidden !important;       /* oreže prebytočnú časť */
+  background-position: center center !important;
+  background-size: cover !important; /* vyplní celý blok */
+}
