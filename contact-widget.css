@@ -7,7 +7,7 @@
 
 .contact-launcher {
   position: fixed;
-  right: 28px;
+  right: 21px;
   bottom: 28px;
   z-index: 9999;
   font-family: system-ui, Segoe UI, Roboto, sans-serif;
