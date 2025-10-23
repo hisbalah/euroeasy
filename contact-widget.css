@@ -73,9 +73,9 @@
 }
 
 .channel-stack {
-  position: absolute;
-  right: 0;
-  bottom: 92px;
+  position: fixed;         /* bolo absolute */
+  right: 28px;             /* MATCHUJ s .contact-launcher right: 28px */
+  bottom: calc(28px + 72px + 20px);
   display: flex;
   flex-direction: column;
   align-items: center;
