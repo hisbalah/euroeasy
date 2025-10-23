@@ -45,3 +45,12 @@
   background-position: center center !important;
   background-size: cover !important; /* vyplní celý blok */
 }
+/* Béžové polopriehľadné pozadie priamo pod textami vo slide-och */
+#div_block-7-1551,
+#div_block-21-1551,
+#div_block-25-1551{
+  background: rgba(212, 180, 131, 0.8); /* #D4B483 @ 50% */
+  padding: 16px 20px;                   /* spraví pás vyšší/širší */
+  border-radius: 8px;                   /* môžeš dať 0, ak nechceš zaoblenie */
+  display: inline-block;                /* nech len obalí text, nie full width */
+}
