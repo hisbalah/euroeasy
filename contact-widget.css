@@ -178,17 +178,4 @@
     opacity: 0.95;
   }
 }
-/* Zarovnanie stredu channel tlačidiel a launcheru na jednu os */
-:root{
-  /* nastav sem SKUTOČNÉ rozmery (podľa tvojho CSS) */
-  --launcher-size: 72px;  /* šírka/výška .launcher-circle */
-  --channel-size: 77px;   /* šírka/výška .channel-btn (po zväčšení o 20 %) */
-}
 
-/* Channel stack nech sa vyrovná na stred launcheru – automaticky, bez „ručného“ posunu */
-.contact-launcher .channel-stack{
-  /* posun vpravo o polovicu rozdielu šírok:
-     ak je channel väčší, výsledok je záporný right (posunie sa mierne doprava),
-     čím sa centrá presne prekryjú */
-  right: calc( (var(--launcher-size) - var(--channel-size)) / 2 ) !important;
-}
