@@ -183,3 +183,95 @@
   transform: scale(2.2);  /* 1.0 = pôvodná veľkosť, 1.2 = zväčšené o 20 % */
   transform-origin: left center; /* nech sa zväčšuje smerom doprava */
 }
+/* === HEADER: zníženie výšky o 18 % (mobil) a 12 % (desktop), logo bezo zmeny === */
+
+/* 📱 MOBIL (≤1024px) */
+@media (max-width: 1024px){
+  :root { --ee-header-h: 107px; } /* 130px - 18 % */
+
+  #_header-3-1546{
+    height: var(--ee-header-h) !important;
+    min-height: var(--ee-header-h) !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #_header-3-1546 .oxy-header-row,
+  #_header-3-1546 .oxy-header-container{
+    height: 100% !important;
+    min-height: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #_header-3-1546 img[src*="logo.png"]{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  #ee-burger{
+    top: calc(var(--ee-header-h) / 2 - 20px) !important;
+  }
+
+  .ee-menu-panel{
+    top: var(--ee-header-h) !important;
+    height: calc(100svh - var(--ee-header-h)) !important;
+  }
+
+  .ee-backdrop{
+    top: var(--ee-header-h) !important;
+  }
+}
+
+/* 🖥 DESKTOP (≥1025px) */
+@media (min-width: 1025px){
+  #_header-3-1546{
+    height: 114px !important;          /* 130px - 12 % */
+    min-height: 114px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #_header-3-1546 .oxy-header-row,
+  #_header-3-1546 .oxy-header-container{
+    height: 100% !important;
+    min-height: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #_header-3-1546 .oxy-header-left,
+  #_header-3-1546 .oxy-header-center,
+  #_header-3-1546 .oxy-header-right{
+    align-self: stretch !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  #_header-3-1546 img[src*="logo.png"]{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+/* === Jemné doladenie pozície loga na mobile a desktope === */
+
+/* 📱 Mobil – logo nižšie */
+@media (max-width: 1024px){
+  #_header-3-1546 img[src*="logo.png"]{
+    margin-top: 8px !important;      /* ⬅️ posunie logo nižšie */
+    margin-left: 0 !important;       /* nechaj tak, ak nechceš posun do strany */
+  }
+}
+
+/* 🖥 Desktop – logo nižšie + doprava */
+@media (min-width: 1025px){
+  #_header-3-1546 img[src*="logo.png"]{
+    margin-top: 8px !important;      /* ⬅️ posunie logo nižšie */
+    margin-left: 180px !important;    /* ⬅️ posunie logo doprava */
+  }
+}
