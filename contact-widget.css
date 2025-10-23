@@ -7,13 +7,14 @@
 
 .contact-launcher {
   position: fixed;
-  right: 28px;
+  right: 50%;
   bottom: 28px;
+  transform: translateX(50%);  /* posunie stred tlačidla na rovnakú os ako channel-btn */
   z-index: 9999;
-  font-family: system-ui, Segoe UI, Roboto, sans-serif;
   display: flex;
   align-items: center;
   gap: 12px;
+}
 }
 
 .launcher-label {
