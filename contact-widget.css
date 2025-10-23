@@ -28,8 +28,8 @@
 }
 
 .launcher-circle {
-  width: 72px;
-  height: 72px;
+  width: 82px;
+  height: 82px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -101,8 +101,8 @@
 }
 
 .channel-btn {
-  width: 71.8px;
-  height: 71.8px;
+  width: 81.8px;
+  height: 81.8px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
