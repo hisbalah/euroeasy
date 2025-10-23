@@ -15,7 +15,6 @@
   align-items: center;
   gap: 12px;
 }
-}
 
 .launcher-label {
   background: #fff;
@@ -44,8 +43,6 @@
   box-shadow: var(--shadow-lg);
   transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
   will-change: transform;
-
-  
 }
 
 .launcher-circle:hover {
@@ -62,6 +59,7 @@
   font-size: 30px;
   line-height: 1;
 }
+
 
 .icon-comment {
   transform-origin: 50% 60%;
@@ -87,9 +85,10 @@
   transform: translateY(20px);
   transition: opacity .3s ease-in-out, transform .3s ease-in-out;
 }
+
 .channel-btn {
-  width: 96.8px;
-  height: 96.8px;
+  width: 76.8px;
+  height: 76.8px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
@@ -180,4 +179,3 @@
     opacity: 0.95;
   }
 }
-
