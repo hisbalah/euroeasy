@@ -1398,30 +1398,26 @@ ready(() => {
   </nav>
   <!-- nový štýl – skryje to na desktope, ukáže iba pri otvorenom mobile menu -->
   <style>
-  /* 📱 Mobilná verzia - logo ako pozadie menu */
-  @media (max-width:1024px){
-    #ee-menu-panel{ position: relative; }
+  #ee-menu-panel > ul {
+  position: relative;
+  z-index: 1;
+}
 
-    #ee-menu-panel > ul{
-      position: relative;
-      z-index: 1;
-    }
-
-    #ee-menu-panel::before{
-      content: "";
-      position: absolute;
-      left: 0; right: 0;
-      top: 210px;                 /* pozícia zhora */
-      height: 180px;             /* výška loga */
-      background: url("https://raw.githubusercontent.com/hisbalah/euroeasy/main/logo1.png")
-                  center / 220px no-repeat;
-      opacity: .9;
-      filter: brightness(0) saturate(100%) invert(85%) sepia(37%) saturate(318%)
-              hue-rotate(346deg) brightness(93%) contrast(90%);
-      pointer-events: none;
-      z-index: 0;
-    }
-  }
+#ee-menu-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;                        /* zaberie celú výšku menu */
+  display: flex;
+  justify-content: center;
+  align-items: center;            /* vycentruje vertikálne aj horizontálne */
+  background: url("https://raw.githubusercontent.com/hisbalah/euroeasy/main/logo1.png")
+              center / 70% no-repeat;   /* 35 % šírky okna (prispôsobí sa */
+  opacity: .9;
+  filter: brightness(0) saturate(100%) invert(85%) sepia(37%) saturate(318%)
+          hue-rotate(346deg) brightness(93%) contrast(90%);
+  pointer-events: none;
+  z-index: 0;
+}
 
   /* 🖥 Desktop - logo sa vôbec nezobrazí */
   @media (min-width:1025px){
