@@ -1393,25 +1393,42 @@ ready(() => {
       <li><a href="gdpr.html">Najčastejšie otazky</a></li>
       <li><a href="Kontakt.html">Kontakt</a></li>
     </ul>
-     <div class="ee-menu-footer"
-     style="position:fixed;left:0;right:0;bottom:20px;
-            display:flex;justify-content:center;align-items:center;
-            z-index:2147483647;pointer-events:none;">
-  <img src="https://raw.githubusercontent.com/hisbalah/euroeasy/main/logo.png" alt="Logo"
-       style="width:140px;height:auto;display:block;opacity:.9;
-              filter:brightness(0) invert(1);pointer-events:none;">
+     
 </div>
   </nav>
   <!-- nový štýl – skryje to na desktope, ukáže iba pri otvorenom mobile menu -->
   <style>
-    @media (min-width: 1025px){
-      .ee-menu-footer{ display: none !important; }
+  /* 📱 Mobilná verzia - logo ako pozadie menu */
+  @media (max-width:1024px){
+    #ee-menu-panel{ position: relative; }
+
+    #ee-menu-panel > ul{
+      position: relative;
+      z-index: 1;
     }
-    @media (max-width: 1024px){
-      .ee-menu-footer{ display: none !important; }
-      body.menu-open .ee-menu-footer{ display: flex !important; }
+
+    #ee-menu-panel::before{
+      content: "";
+      position: absolute;
+      left: 0; right: 0;
+      top: 210px;                 /* pozícia zhora */
+      height: 180px;             /* výška loga */
+      background: url("https://raw.githubusercontent.com/hisbalah/euroeasy/main/logo1.png")
+                  center / 220px no-repeat;
+      opacity: .9;
+      filter: brightness(0) saturate(100%) invert(85%) sepia(37%) saturate(318%)
+              hue-rotate(346deg) brightness(93%) contrast(90%);
+      pointer-events: none;
+      z-index: 0;
     }
-  </style>
+  }
+
+  /* 🖥 Desktop - logo sa vôbec nezobrazí */
+  @media (min-width:1025px){
+    #ee-menu-panel::before{ content: none; }
+  }
+</style>
+
   <script src="ee-mobile.js" defer></script>
 </body>
 </html>
