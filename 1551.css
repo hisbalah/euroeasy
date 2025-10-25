@@ -54,3 +54,66 @@
   border-radius: 8px;                   /* môžeš dať 0, ak nechceš zaoblenie */
   display: inline-block;                /* nech len obalí text, nie full width */
 }
+#slider-3-1551,
+#slider-3-1551 .ct-slide,
+#slider-3-1551 .ct-slide * {
+  color: #000 !important;
+}
+/* ✨ Sociálne ikony v headeri (desktop) */
+.header-social {
+  display: flex;
+  align-items: center;          /* vyrovná vertikálne s menu položkami */
+  margin-left: 32px;           /* odstup od položky "Kontakt" */
+  position: relative;
+  top: 2px;                    /* jemný dolný posun, ak by boli vyššie */
+}
+
+.header-social .social-link {
+  color: #7A5230;              /* kávová farba */
+  font-size: 19px;             /* väčšie ako text menu */
+  margin-left: 24px;           /* väčší rozostup medzi ikonami */
+  transition: color 0.25s ease;
+}
+/* default: skryté (desktop) */
+.mobile-social { display: none; }
+
+/* Mobil a tablet */
+@media (max-width: 1024px){
+  /* skry desktopové ikony, ak máš */
+  .header-social { display: none !important; }
+
+  .mobile-social{
+    position: fixed;      /* ukotvíme voči viewportu – bude vždy vedľa burgera */
+    top: 38.5px;            /* jemne zoraď so záhlavím (doladíš 14–22px) */
+    right: 98px;          /* vzdialenosť od hamburgera – uprav podľa oka */
+    display: flex;
+    gap: 20px;            /* rozostup ikon */
+    align-items: center;
+    z-index: 2147483640;  /* nad pozadím, pod sticky prvkami */
+  }
+
+  .mobile-social .social-link{
+    color: #7A5230;       /* kávová */
+    font-size: 26px;      /* trochu väčšie než položky menu */
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform .15s ease, color .2s ease;
+  }
+
+  .mobile-social .social-link:hover{
+    color: #000;          /* jemný hover */
+    transform: translateY(-1px);
+  }
+}
+/* 🖥️ Hover efekt pre desktopové ikony */
+.header-social .social-link {
+  transition: color 0.25s ease, transform 0.15s ease;
+}
+
+.header-social .social-link:hover {
+  color: #000;                   /* stmavenie farby */
+  transform: translateY(-4px);   /* jemné nadvihnutie ikon */
+}
