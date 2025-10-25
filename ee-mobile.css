@@ -298,3 +298,15 @@
     pointer-events: none;
   }
 }
+/* === SKRYŤ MENU POD FOOTEROM === */
+.cmplz-cookiebanner .cmplz-links,
+.cmplz-cookiebanner .oxy-nav-menu-list,
+body > .oxy-nav-menu-list,
+body > ul.oxy-nav-menu-list,
+body > nav:not(#ee-menu-panel),
+section#Footer ~ nav,
+section#Footer ~ ul,
+section#Footer ~ .oxy-nav-menu {
+  display: none !important;
+  visibility: hidden !important;
+}
