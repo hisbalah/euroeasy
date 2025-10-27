@@ -20,6 +20,14 @@
   min-height: 400px;
 }
 
+/* 🌆 Kontakt - prepíš pozadie pre podstránku Kontakt */
+body.kontakt #section-2-1551,
+body.kontakt #section-2-1551 .ct-section-inner-wrap,
+body.kontakt #slider-3-1551,
+body.kontakt #slider-3-1551 .oxygen-unslider-container {
+  background-image: url("ulm.png") !important;
+}
+
 /* 3) If Oxygen/Theme adds overlays via ::before, neutralize them */
 #section-2-1551::before,
 #slider-3-1551::before,
@@ -117,3 +125,224 @@
   color: #000;                   /* stmavenie farby */
   transform: translateY(-4px);   /* jemné nadvihnutie ikon */
 }
+/* 🎯 Iba jeden konkrétny button Mám záujem NAMODRO */
+#link_button-35-1551 {
+  background-color: #71C2F7 !important;  /* tvoja modrá farba */
+  color: #000 !important;               /* čierny text */
+  border: 2px solid #71C2F7 !important;
+}
+/* 🌆 Kontakt - vlastné pozadie a skryté texty */
+body.kontakt #slider-3-1551,
+body.kontakt #section-2-1551 {
+  background-image: url("ulm.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Skry texty, tlačidlá a pásy */
+body.kontakt #slider-3-1551 .ct-headline,
+body.kontakt #slider-3-1551 .ct-text-block,
+body.kontakt #slider-3-1551 .ct-link-button,
+body.kontakt #slider-3-1551 .oxy-button,
+body.kontakt #slider-3-1551 .unslider-nav,
+body.kontakt #slider-3-1551 .unslider-arrow,
+body.kontakt #div_block-7-1551,
+body.kontakt #div_block-21-1551,
+body.kontakt #div_block-25-1551 {
+  display: none !important;
+}
+
+/* Header bude na fotke */
+body.kontakt #ee-header {
+  position: relative;
+  z-index: 50;
+  background: transparent !important;
+}
+
+/* Posun slidera pod header */
+@media (min-width: 1025px) {
+  body.kontakt #section-2-1551,
+  body.kontakt #slider-3-1551 {
+    margin-top: -82px;
+    padding-top: 82px;
+  }
+}
+@media (max-width: 1024px) {
+  body.kontakt #section-2-1551,
+  body.kontakt #slider-3-1551 {
+    margin-top: -64px;
+    padding-top: 64px;
+  }
+}
+#site-footer {
+  position: relative;
+  overflow: hidden; /* aby nepretiekol farbou mimo */
+  }
+}
+
+
+/* ========= Footer (štýl „liberation") ========= */
+/* 🎛️ Farby & nastavenia (tu si meníš vzhľad) */
+:root{
+  --footer-text: #ffffff;
+  --footer-link: #D4B483;          /* odkazy */
+  --footer-link-hover: #ffffff;    /* hover */
+  --footer-bottom-bg: rgba(0,0,0,.35);
+  --footer-heading: #ffffff;
+  --footer-overlay: rgba(0,0,0,.25);  /* stmavenie pozadia (overlay) */
+  --footer-beige: rgba(212, 180, 131, 0.85); /* hnedá/béžová farba pásu */
+}
+
+/* Pozadie footeru – ostáva footer.png */
+#site-footer{
+  position: relative;
+  color: var(--footer-text);
+  background: url('footer.png') center/cover no-repeat;
+}
+
+/* BÉŽOVÝ PÁS pod logom a textom */
+#site-footer::before{
+  content: "";
+  position: absolute;
+  left: 40%;
+  right: 23%;
+  top: 0;
+  bottom: 0;
+  background: #D4B483 !important;  /* TESTOVACIA ČERVENÁ - musí byť viditeľná */
+  z-index: 1 !important;
+  display: block !important;
+  opacity: 1 !important;
+}
+/* BÉŽOVÝ PÁS - MOBIL/TABLET - upravené orezanie */
+@media (max-width: 1024px){
+  #site-footer::before{
+    left: 10%;      /* zmeň podľa potreby */
+    right: 10%;     /* zmeň podľa potreby */
+    top: 8%;       /* orezanie zhora */
+    bottom: 0;     /* alebo pridaj napr. bottom: 10%; */
+  }
+}
+
+
+/* staré absolútne logo vypnuté */
+.footer-logo{ display:none !important; }
+
+/* vnútro: logo (vľavo) + stĺpce (vpravo) */
+#site-footer .footer-wrap{
+  position: relative;
+  z-index: 2; /* nad overlayom a béžovým pásom */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 24px;
+  min-height: 360px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  align-items: start;
+  margin-left: 42%;
+  margin-right: 10%;
+}
+
+/* logo */
+#site-footer .footer-brand{
+  flex-shrink: 0;
+}
+
+#site-footer .footer-brand img{
+  display:block;
+  height: 200px;         /* zmeň výšku loga na desktope */
+  width: auto;
+  filter: brightness(0) invert(1); /* biele logo bez úpravy obrázka */
+  opacity: .95;
+}
+
+/* stĺpce */
+#site-footer .footer-columns{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 24px;
+}
+
+#site-footer h4{
+  margin: 0 0 10px;
+  font-size: 28px;
+  color: var(--footer-heading);
+}
+
+#site-footer p, 
+#site-footer li, 
+#site-footer a{
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+#site-footer a{
+  color: var(--footer-link);
+  text-decoration: none;
+  transition: color .2s ease, opacity .2s ease;
+}
+
+#site-footer a:hover{
+  color: var(--footer-link-hover);
+  opacity: .95;
+}
+
+#site-footer .f-links{
+  list-style: none;
+  margin: 0; padding: 0;
+}
+
+#site-footer .f-links li{ margin: 6px 0; }
+
+/* spodná lišta */
+#site-footer .footer-bottom{
+  position: relative;
+  z-index: 1;
+  background: var(--footer-bottom-bg);
+  padding: 14px 24px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* ======= Mobil / tablet ======= */
+@media (max-width: 1024px){
+  /* logo hore uprostred */
+  #site-footer .footer-wrap{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px 20px;
+    min-height: 480px;
+    gap: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #site-footer .footer-brand{
+    display:flex; 
+    justify-content:center; 
+    align-items:flex-start;
+    margin: 0;
+  }
+  
+  #site-footer .footer-brand img{
+    height: 164px;         /* zmeň výšku loga na mobile */
+  }
+  
+  #site-footer .footer-columns{
+    grid-template-columns: 1fr; /* stĺpce pod seba */
+    gap: 18px;
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  #site-footer .footer-columns > .f-col:first-child{
+    margin-top: 0;
+  }
+  
+  #site-footer .footer-columns > .f-col:first-child h4{
+    margin-top: 0;
+  }
+}
+
