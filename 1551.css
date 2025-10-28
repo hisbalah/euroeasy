@@ -218,8 +218,9 @@ body.kontakt #ee-header {
 /* BÉŽOVÝ PÁS - MOBIL/TABLET - upravené orezanie */
 @media (max-width: 1024px){
   #site-footer::before{
-    left: 10%;      /* zmeň podľa potreby */
-    right: 10%;     /* zmeň podľa potreby */
+    width: auto;  /* ✅ automaticka sirka */
+    left: 60px;      /* zmeň podľa potreby */
+    right: 60px;     /* zmeň podľa potreby */
     top: 8%;       /* orezanie zhora */
     bottom: 0;     /* alebo pridaj napr. bottom: 10%; */
   }
@@ -263,7 +264,7 @@ body.kontakt #ee-header {
 #site-footer .footer-columns{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
+  gap: 90px;
   margin-top: 32px;
 }
 
@@ -271,6 +272,7 @@ body.kontakt #ee-header {
   margin: 0 0 10px;
   font-size: 28px;
   color: var(--footer-heading);
+  white-space: nowrap;
 }
 
 #site-footer p, 
