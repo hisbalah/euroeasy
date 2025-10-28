@@ -1,5 +1,5 @@
 /* === Euroeasy Mobile: Liberation-style hamburger + custom slide-in menu === */
-@media (max-width: 1024px){
+@media (max-width: 1058px){
   /* Hide Oxygen's default hamburger if still present anywhere */
   .oxy-nav-menu .oxy-menu-toggle,
   .oxy-nav-menu-hamburger-wrap,
@@ -186,7 +186,7 @@
 /* === HEADER: zníženie výšky o 18 % (mobil) a 12 % (desktop), logo bezo zmeny === */
 
 /* 📱 MOBIL (≤1024px) */
-@media (max-width: 1024px){
+@media (max-width: 1058px){
   :root { --ee-header-h: 107px; } /* 130px - 18 % */
 
   #_header-3-1546{
@@ -269,19 +269,20 @@
 }
 
 /* 🖥 Desktop – logo nižšie + doprava */
-@media (min-width: 1025px){
+@media (min-width: 1059px){
   #_header-3-1546 img[src*="logo.png"]{
     margin-top: 8px !important;      /* ⬅️ posunie logo nižšie */
     margin-left: 180px !important;    /* ⬅️ posunie logo doprava */
   }
 }
 /* === DESKTOP CLEANUP: skry mobilné prvky na desktope (≥1025px) === */
-@media (min-width: 1025px){
+@media (min-width: 1059px){
 
   /* 1) Schovaj vlastný mobilný burger #ee-burger na desktope */
   #ee-burger{
     display: none !important;
   }
+  
 @media (max-width: 1024px){
   .ee-menu-footer{
     position: fixed;
