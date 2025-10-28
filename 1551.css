@@ -205,9 +205,10 @@ body.kontakt #ee-header {
 #site-footer::before{
   content: "";
   position: absolute;
-  left: 40%;
-  right: 23%;
-  top: 0;
+  width: 710px; /* šírka pásu ako pri 1920 px */
+  left: calc(50% - 192px); /* presná pozícia z tvojho 1920 layoutu */
+  right: 0%;
+  top: 10%;
   bottom: 0;
   background: #D4B483 !important;  /* TESTOVACIA ČERVENÁ - musí byť viditeľná */
   z-index: 1 !important;
@@ -236,8 +237,9 @@ body.kontakt #ee-header {
   margin: 0 auto;
   padding: 56px 24px;
   min-height: 360px;
+  max-height: 360px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 32px;
   align-items: start;
   margin-left: 42%;
@@ -260,8 +262,9 @@ body.kontakt #ee-header {
 /* stĺpce */
 #site-footer .footer-columns{
   display: grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  margin-top: 32px;
 }
 
 #site-footer h4{
