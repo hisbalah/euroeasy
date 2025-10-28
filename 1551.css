@@ -86,7 +86,7 @@ body.kontakt #slider-3-1551 .oxygen-unslider-container {
 .mobile-social { display: none; }
 
 /* Mobil a tablet */
-@media (max-width: 1024px){
+@media (max-width: 1058px){
   /* skry desktopové ikony, ak máš */
   .header-social { display: none !important; }
 
@@ -95,7 +95,7 @@ body.kontakt #slider-3-1551 .oxygen-unslider-container {
     top: 38.5px;            /* jemne zoraď so záhlavím (doladíš 14–22px) */
     right: 98px;          /* vzdialenosť od hamburgera – uprav podľa oka */
     display: flex;
-    gap: 20px;            /* rozostup ikon */
+    gap: 30px;            /* rozostup ikon */
     align-items: center;
     z-index: 2147483640;  /* nad pozadím, pod sticky prvkami */
   }
@@ -130,6 +130,28 @@ body.kontakt #slider-3-1551 .oxygen-unslider-container {
   background-color: #71C2F7 !important;  /* tvoja modrá farba */
   color: #000 !important;               /* čierny text */
   border: 2px solid #71C2F7 !important;
+}
+#link_button-35-1551:hover {
+  background-color: #4bb4f5 !important;  /* trochu tmavšia modrá pri hover */
+  color: #fff !important;                /* text sa zmení na biely */
+}
+#link_button-42-1551 {
+  background-color: #71C2F7 !important;  /* tvoja modrá farba */
+  color: #000 !important;               /* čierny text */
+  border: 2px solid #71C2F7 !important;
+}
+#link_button-42-1551:hover {
+  background-color: #4bb4f5 !important;  /* trochu tmavšia modrá pri hover */
+  color: #fff !important;                /* text sa zmení na biely */
+}
+#link_button-57-1551 {
+  background-color: #71C2F7 !important;  /* tvoja modrá farba */
+  color: #000 !important;               /* čierny text */
+  border: 2px solid #71C2F7 !important;
+}
+#link_button-57-1551:hover {
+  background-color: #4bb4f5 !important;  /* trochu tmavšia modrá pri hover */
+  color: #fff !important;                /* text sa zmení na biely */
 }
 /* 🌆 Kontakt - vlastné pozadie a skryté texty */
 body.kontakt #slider-3-1551,
@@ -168,7 +190,8 @@ body.kontakt #ee-header {
     padding-top: 82px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1058
+px) {
   body.kontakt #section-2-1551,
   body.kontakt #slider-3-1551 {
     margin-top: -64px;
@@ -216,7 +239,7 @@ body.kontakt #ee-header {
   opacity: 1 !important;
 }
 /* BÉŽOVÝ PÁS - MOBIL/TABLET - upravené orezanie */
-@media (max-width: 1024px){
+@media (max-width: 1058px){
   #site-footer::before{
     width: auto;  /* ✅ automaticka sirka */
     left: 45px;      /* zmeň podľa potreby */
@@ -270,8 +293,11 @@ body.kontakt #ee-header {
 
 #site-footer h4{
   margin: 0 0 10px;
-  font-size: 28px;
+  font-size: 38px;
+  white-space: nowrap;
   color: var(--footer-heading);
+  font-family: "Changa One", sans-serif;
+  text-transform: uppercase; /* aby text bol veľkými písmenami */
 }
 
 #site-footer p, 
@@ -311,7 +337,7 @@ body.kontakt #ee-header {
 }
 
 /* ======= Mobil / tablet ======= */
-@media (max-width: 1024px){
+@media (max-width: 1058px){
   /* logo hore uprostred */
   #site-footer .footer-wrap{
     display: grid;
