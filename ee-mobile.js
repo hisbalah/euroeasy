@@ -33,3 +33,25 @@
   });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeMenu(); }});
 })();
+
+// 🧭 Zjednotenie zobrazenia burgera a menu pri 1024 px
+window.addEventListener('resize', toggleBurgerMenuDisplay);
+window.addEventListener('DOMContentLoaded', toggleBurgerMenuDisplay);
+
+function toggleBurgerMenuDisplay() {
+  const width = window.innerWidth;
+  const burger = document.getElementById('ee-burger');
+  const menu = document.querySelector('.oxy-nav-menu.oxy-nav-menu-dropdowns');
+
+  if (!burger || !menu) return;
+
+  if (width <= 1058) {
+    // mobilný režim: zobraz burger, skry desktop menu
+    burger.style.display = 'block';
+    menu.style.display = 'none';
+  } else {
+    // desktop režim: zobraz desktop menu, skry burger
+    burger.style.display = 'none';
+    menu.style.display = 'flex';
+  }
+}
