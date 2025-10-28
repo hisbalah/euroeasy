@@ -219,8 +219,8 @@ body.kontakt #ee-header {
 @media (max-width: 1024px){
   #site-footer::before{
     width: auto;  /* ✅ automaticka sirka */
-    left: 60px;      /* zmeň podľa potreby */
-    right: 60px;     /* zmeň podľa potreby */
+    left: 45px;      /* zmeň podľa potreby */
+    right: 45px;     /* zmeň podľa potreby */
     top: 8%;       /* orezanie zhora */
     bottom: 0;     /* alebo pridaj napr. bottom: 10%; */
   }
