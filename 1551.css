@@ -264,15 +264,14 @@ body.kontakt #ee-header {
 #site-footer .footer-columns{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 90px;
-  margin-top: 32px;
+  gap: 60px;
+  margin-top: 40px;
 }
 
 #site-footer h4{
   margin: 0 0 10px;
   font-size: 28px;
   color: var(--footer-heading);
-  white-space: nowrap;
 }
 
 #site-footer p, 
